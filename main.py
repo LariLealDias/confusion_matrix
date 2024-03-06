@@ -23,7 +23,7 @@ y_predict = decision_tree.predict(x_val)
 generate_confusion_matrix = confusion_matrix(y_val, y_predict)
 
 print(generate_confusion_matrix)
-s
+
 generate_confusion_matrix_graphic = ConfusionMatrixDisplay(confusion_matrix=generate_confusion_matrix, display_labels=['n-diabetico', 'diabetico'])
 generate_confusion_matrix_graphic.plot()
 plt.show()
