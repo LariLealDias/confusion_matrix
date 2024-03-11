@@ -4,6 +4,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, precision_score, recall_score,f1_score
 
 data_df = pd.read_csv('./data/diabetes.csv')
 
@@ -27,5 +28,13 @@ print(generate_confusion_matrix)
 generate_confusion_matrix_graphic = ConfusionMatrixDisplay(confusion_matrix=generate_confusion_matrix, display_labels=['n-diabetico', 'diabetico'])
 generate_confusion_matrix_graphic.plot()
 plt.show()
+
+
+#  Metrics
+print(f"accuracy score: {accuracy_score(y_val, y_predict)}")
+print(f"precision score: {precision_score(y_val, y_predict)}")
+print(f"recall score: {recall_score(y_val, y_predict)}")
+print(f"f1 score: {f1_score(y_val, y_predict)}")
+
 
 
